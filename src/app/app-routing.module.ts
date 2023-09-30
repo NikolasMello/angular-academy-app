@@ -5,11 +5,16 @@ import { CleanLayoutComponent } from './theme/clean-layout/clean-layout.componen
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full',
+  },
+  {
     path:'',
     component: NavigationMenuComponent,
     children:[
       {
-        path:'',
+        path:'home',
         loadChildren: ()=> import('./pages/home/home.module').then((module) => module.HomeModule)
       }
     ]   

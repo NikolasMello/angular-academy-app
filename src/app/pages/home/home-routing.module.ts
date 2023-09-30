@@ -6,7 +6,7 @@ const routes: Routes = [
     path:'',
     children: [
       {
-        path:'dashboard',
+        path:'',
         loadComponent: ()=> import('./dashboard/dashboard.component')
       }
     ]

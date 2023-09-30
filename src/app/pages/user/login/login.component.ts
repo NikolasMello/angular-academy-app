@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   standalone: true,
@@ -12,7 +13,8 @@ export default class LoginComponent implements OnInit {
   loginForm: FormGroup;
 
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private router: Router
   ){
 
   }
@@ -26,6 +28,10 @@ export default class LoginComponent implements OnInit {
       email:'',
       password:''
     })
+  }
+
+  login(){
+    this.router.navigate(['']);
   }
 
 }

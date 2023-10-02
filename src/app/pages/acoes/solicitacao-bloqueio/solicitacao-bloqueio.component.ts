@@ -8,6 +8,6 @@ import { CommonModule } from '@angular/common';
   templateUrl: './solicitacao-bloqueio.component.html',
   styleUrls: ['./solicitacao-bloqueio.component.css']
 })
-export class SolicitacaoBloqueioComponent {
+export default  class SolicitacaoBloqueioComponent {
 
 }

@@ -8,6 +8,6 @@ import { CommonModule } from '@angular/common';
   templateUrl: './moveis.component.html',
   styleUrls: ['./moveis.component.css']
 })
-export class MoveisComponent {
+export default class MoveisComponent {
 
 }

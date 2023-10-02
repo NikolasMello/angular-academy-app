@@ -8,6 +8,6 @@ import { CommonModule } from '@angular/common';
   templateUrl: './reiniciar-sistema.component.html',
   styleUrls: ['./reiniciar-sistema.component.css']
 })
-export class ReiniciarSistemaComponent {
+export default  class ReiniciarSistemaComponent {
 
 }

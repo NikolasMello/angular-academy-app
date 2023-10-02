@@ -8,6 +8,6 @@ import { CommonModule } from '@angular/common';
   templateUrl: './morador.component.html',
   styleUrls: ['./morador.component.css']
 })
-export class MoradorComponent {
+export default class MoradorComponent {
 
 }

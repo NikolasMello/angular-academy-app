@@ -8,6 +8,6 @@ import { CommonModule } from '@angular/common';
   templateUrl: './perfil.component.html',
   styleUrls: ['./perfil.component.css']
 })
-export class PerfilComponent {
+export default class PerfilComponent {
 
 }

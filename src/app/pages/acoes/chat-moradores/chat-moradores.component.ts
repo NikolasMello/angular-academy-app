@@ -8,6 +8,6 @@ import { CommonModule } from '@angular/common';
   templateUrl: './chat-moradores.component.html',
   styleUrls: ['./chat-moradores.component.css']
 })
-export class ChatMoradoresComponent {
+export default class ChatMoradoresComponent {
 
 }

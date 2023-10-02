@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MoradorComponent } from './morador.component';
+import  MoradorComponent  from './morador.component';
 
 describe('MoradorComponent', () => {
   let component: MoradorComponent;

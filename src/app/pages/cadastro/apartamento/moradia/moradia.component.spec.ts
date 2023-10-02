@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MoradiaComponent } from './moradia.component';
+import  MoradiaComponent  from './moradia.component';
 
 describe('MoradiaComponent', () => {
   let component: MoradiaComponent;

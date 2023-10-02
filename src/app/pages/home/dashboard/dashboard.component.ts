@@ -13,8 +13,6 @@ export default class DashboardComponent implements OnInit {
   constructor(
     private router: Router
   ){
-    console.log(this.router.url)
-    console.log('1')
   }
 
   ngOnInit(): void {

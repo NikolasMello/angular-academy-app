@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { NavigationMenuComponent } from './theme/navigation-menu/navigation-menu.component';
 import { CleanLayoutComponent } from './theme/clean-layout/clean-layout.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SideNavComponent } from './theme/navigation-menu/side-nav/side-nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationMenuComponent,
-    CleanLayoutComponent
+    CleanLayoutComponent,
+    SideNavComponent
   ],
   imports: [
     BrowserModule,

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import  PessoafisicaComponent  from './pessoafisica.component';
+import { SideNavComponent } from './side-nav.component';
 
-describe('PessoafisicaComponent', () => {
-  let component: PessoafisicaComponent;
-  let fixture: ComponentFixture<PessoafisicaComponent>;
+describe('SideNavComponent', () => {
+  let component: SideNavComponent;
+  let fixture: ComponentFixture<SideNavComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ PessoafisicaComponent ]
+      imports: [ SideNavComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PessoafisicaComponent);
+    fixture = TestBed.createComponent(SideNavComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

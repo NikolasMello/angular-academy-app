@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationItem, NavigationItems } from './navigation';
+import { NavigationItem, NavigationMenu, SideNavItem } from './navigation';
 import { Router } from '@angular/router';
+import { faHome, faEdit, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navigation-menu',
@@ -9,17 +10,31 @@ import { Router } from '@angular/router';
 })
 export class NavigationMenuComponent implements OnInit {
 
-  navigations: NavigationItem[] =  NavigationItems;
+  faHome:IconDefinition = faHome;
+  faEdit:IconDefinition = faEdit;
+
+  navigationClass: NavigationMenu = new NavigationMenu();
+  navigations: NavigationItem[] =  this.navigationClass.getNavigationMenu();
+  currentNavigation: NavigationItem;
   userMenu: boolean = false;
 
   constructor(
-    private router: Router
+    private router: Router,
   ){
-
+    this.setCurrentNavigation(this.router.url);
   }
 
   ngOnInit(): void {
-      
+    this.setCurrentNavigation(this.router.url);
+  }
+
+  setCurrentNavigation(route: string){
+    if(route !== undefined){
+      let index = this.navigations.findIndex( item => route.startsWith(item.url ? item.url : ''));
+      if(index >= 0){
+        this.currentNavigation = this.navigations[index];
+      }
+    }  
   }
 
   openUserMenu(){
@@ -30,14 +45,22 @@ export class NavigationMenuComponent implements OnInit {
     this.userMenu = false;
   }
 
+  navigateToRoute(navItem: NavigationItem):void{
+    this.currentNavigation = navItem;
+      if(navItem.url !== undefined){
+        this.router.navigate([navItem.url]);
+      }
+  }
+
   activeRoute(route: string | undefined): string{
-    console.log('minha route', route)
-    if(route === this.router.url){
-      return 'active';
+    if(route !== undefined){
+      if(this.router.url.startsWith(route)){
+        return 'active';
+      } else {
+        return '';
+      }
     } else {
       return '';
     }
   }
-
-
 }

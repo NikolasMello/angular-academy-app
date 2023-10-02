@@ -8,6 +8,6 @@ import { CommonModule } from '@angular/common';
   templateUrl: './solicitacao-servicos.component.html',
   styleUrls: ['./solicitacao-servicos.component.css']
 })
-export class SolicitacaoServicosComponent {
+export default class SolicitacaoServicosComponent {
 
 }

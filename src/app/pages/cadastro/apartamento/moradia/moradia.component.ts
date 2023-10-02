@@ -8,6 +8,6 @@ import { CommonModule } from '@angular/common';
   templateUrl: './moradia.component.html',
   styleUrls: ['./moradia.component.css']
 })
-export class MoradiaComponent {
+export default  class MoradiaComponent {
 
 }

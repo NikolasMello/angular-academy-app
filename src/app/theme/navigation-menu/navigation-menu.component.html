@@ -1,6 +1,6 @@
-<div class="min-h-full">
-    <nav class="bg-cyan-600">
-      <div class="mx-auto max-w-full px-4 sm:px-6 lg:px-8">
+<div class="min-h-full flex">
+    <nav class="bg-cyan-600 shadow-lg fixed w-full">
+      <div class="mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex h-16 items-center justify-between">
           <div class="flex items-center">
             <div class="flex-shrink-0">
@@ -9,7 +9,9 @@
             <div class="hidden md:block">
               <div class="ml-10 flex items-baseline space-x-4">
                 <a class="nav-item {{ activeRoute( navigation.url ) }}"
-                    *ngFor="let navigation of navigations">{{ navigation.title }}</a>
+                    *ngFor="let navigation of navigations" (click)="navigateToRoute(navigation)">
+                    <fa-icon [icon]="navigation.icon" class="me-2 "></fa-icon>
+                    {{ navigation.title }}</a>
               </div>
             </div>
           </div>
@@ -106,17 +108,12 @@
         </div>
       </div>
     </nav>
-  
-    <header class="bg-white shadow">
-      <div class="mx-auto max-w-full px-4 py-6 sm:px-6 lg:px-8">
-        <h1 class="text-3xl font-bold tracking-tight text-gray-900">Dashboard</h1>
-      </div>
-    </header>
-    <main>
-      <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+    <nav class="w-1/5 2xl:w-1/6 min-h-screen nav-shadow pt-16 flex-none bg-white">
+      <app-side-nav [navData]="currentNavigation"></app-side-nav>
+    </nav>
+    <main class="flex-1 w-full mt-16 sm:p-4 lg:p-6">
         <router-outlet></router-outlet>
-      </div>
     </main>
-  </div>
+</div>
   
 

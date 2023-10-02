@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -8,6 +8,10 @@ import { CommonModule } from '@angular/common';
   templateUrl: './controlador-saida.component.html',
   styleUrls: ['./controlador-saida.component.css']
 })
-export class ControladorSaidaComponent {
+export default class ControladorSaidaComponent implements OnInit{
+
+  ngOnInit(): void {
+      
+  }
 
 }

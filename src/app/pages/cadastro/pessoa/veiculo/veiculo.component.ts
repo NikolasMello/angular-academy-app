@@ -8,6 +8,6 @@ import { CommonModule } from '@angular/common';
   templateUrl: './veiculo.component.html',
   styleUrls: ['./veiculo.component.css']
 })
-export class VeiculoComponent {
+export default class VeiculoComponent {
 
 }

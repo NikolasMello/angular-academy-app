@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { NavigationItem, NavigationMenu, SideNavItem } from './navigation';
 import { Router } from '@angular/router';
 import { faHome, faEdit, IconDefinition } from '@fortawesome/free-solid-svg-icons';
@@ -42,7 +42,13 @@ export class NavigationMenuComponent implements OnInit {
   }
 
   closeUserMenu(){
-    this.userMenu = false;
+    setTimeout(()=> {
+      this.userMenu = false;
+    },500)
+  }
+  
+  logout(){
+    this.router.navigate(['/login'])
   }
 
   navigateToRoute(navItem: NavigationItem):void{

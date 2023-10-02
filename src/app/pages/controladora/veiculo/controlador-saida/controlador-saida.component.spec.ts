@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ControladorSaidaComponent } from './controlador-saida.component';
+import  ControladorSaidaComponent  from './controlador-saida.component';
 
 describe('ControladorSaidaComponent', () => {
   let component: ControladorSaidaComponent;

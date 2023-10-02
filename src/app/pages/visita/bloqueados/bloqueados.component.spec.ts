@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BloqueadosComponent } from './bloqueados.component';
+import  BloqueadosComponent  from './bloqueados.component';
 
 describe('BloqueadosComponent', () => {
   let component: BloqueadosComponent;

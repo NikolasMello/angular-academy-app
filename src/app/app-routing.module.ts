@@ -7,7 +7,7 @@ import { AcessosModule } from './pages/relatorios/acessos/acessos.module';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: '/login',
     pathMatch: 'full',
   },
   {

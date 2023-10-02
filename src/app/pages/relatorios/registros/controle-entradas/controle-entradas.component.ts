@@ -8,6 +8,6 @@ import { CommonModule } from '@angular/common';
   templateUrl: './controle-entradas.component.html',
   styleUrls: ['./controle-entradas.component.css']
 })
-export class ControleEntradasComponent {
+export default class ControleEntradasComponent {
 
 }

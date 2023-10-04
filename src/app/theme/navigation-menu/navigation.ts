@@ -92,7 +92,7 @@ export class NavigationMenu {
             {
                 id: 'nav-home',
                 title: 'Dashboard',
-                url: '',
+                url: '/home',
                 icon: faSquarePollVertical,
                 hasChild: false,
                 subItens:[ ]
